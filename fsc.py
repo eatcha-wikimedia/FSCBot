@@ -717,7 +717,10 @@ class Candidate:
 
         # Find the number of lines in the gallery
         m = re.search(r"(?ms)<gallery>(.*)</gallery>", old_text)
+	if m is None:
+            return None
         count = m.group(0).count("\n")
+	
 
         # We just need to append to the bottom of the gallery
         # with an added title
