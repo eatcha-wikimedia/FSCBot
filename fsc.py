@@ -1,5 +1,22 @@
 # -*- coding: utf-8 -*-
 """
+This script is derived from the source code of fpcBot https://github.com/Zitrax/fscBot  which was originally written by 
+Daniel78 at commons.wikimedia.org or Zitax on GitHub. 
+
+FSCBot's latest source can be found at https://github.com/eatcha-wikimedia/FSCBot
+Its user page is at https://commons.wikimedia.org/wiki/User:FSCBot
+
+This bot runs on Toollabs (Eqiad cluster), a Wikimedia Foundation, Inc server Cluster in Virginia, Ashburn, USA
+
+Bot's recent edits can be found at https://commons.wikimedia.org/wiki/Special:Contributions/FSCBot
+
+This bot runs in 3 shifts 5:00, 13:00, 21:00 UTC  , the cronjob looks like the following. 
+0 5,13,21 * * * jsub -once python3 fsc.py -park -close -auto
+
+This bot runs as FSCBot on the commons.wikimedia.org
+It implements vote counting and supports
+moving the finished nomination to the archive.
+
 It adds the following commandline arguments:
 
 -test             Perform a testrun against an old log
