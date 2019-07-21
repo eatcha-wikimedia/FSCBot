@@ -1514,7 +1514,7 @@ def main(*args):
     global G_MatchPattern
     global G_Site
 
-    Will sys.exit(-1) if another instance is running
+    #Will sys.exit(-1) if another instance is running
     me = singleton.SingleInstance()
 
     FSClist = "Commons:Featured sound candidates/candidate_list"
