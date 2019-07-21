@@ -1142,10 +1142,10 @@ def wikipattern(s):
     def rep(m):
         if m.group(0) == " " or m.group(0) == "_":
             return "[ _]"
-        elif m.group(0) == "(" or m.group(0) == ")" or m.group(0) == "*":
+        elif m.group(0) == "(" or m.group(0) == ")" or m.group(0) == "*" or m.group(0) == "+" or m.group(0) == "=" or m.group(0) == "?" or m.group(0) == "!" or m.group(0) == "^" or m.group(0) == "-":
             return "\\" + m.group(0)
 
-    return re.sub(r"[ _()*]", rep, s)
+    return re.sub(r"[ _()*+=?!^-]", rep, s)
 
 
 def out(text, newline=True, date=False, color=None):
